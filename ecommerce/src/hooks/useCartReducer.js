@@ -1,13 +1,15 @@
-import { cartReducer } from "../reducers/cart";
+import { cartReducer, cartInitialState } from "../reducers/cart";
 import { useReducer } from "react";
 
-const initialState = [];
+
+
+
 
 export function useCartReducer() {
   /*
     Uso del hook useReducer
   */
-  const [state, dispatch] = useReducer(cartReducer, initialState);
+  const [state, dispatch] = useReducer(cartReducer, cartInitialState);
 
   const addToCart = (product) =>
     dispatch({
